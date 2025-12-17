@@ -1,0 +1,1733 @@
+[gd_scene load_steps=37 format=3 uid="uid://ck6uwf4a3df5u"]
+
+[ext_resource type="Script" uid="uid://c6y6q5m7g5p68" path="res://main.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://bd3c5rpwd7je4" path="res://new_texture_2drd.tres" id="2_0hol4"]
+[ext_resource type="Texture2D" uid="uid://bx30cxvqndnut" path="res://icon.svg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://b51euub6oyj45" path="res://ui.gd" id="4_kdubu"]
+[ext_resource type="Shader" uid="uid://c78er1tt02on3" path="res://show.gdshader" id="5_d21ai"]
+[ext_resource type="FontFile" uid="uid://dlnsr6kq1u0jd" path="res://LXGWWenKaiMono-Medium.ttf" id="5_q6r6c"]
+
+[sub_resource type="Gradient" id="Gradient_0hol4"]
+offsets = PackedFloat32Array(0.00475061)
+colors = PackedColorArray(0.163767, 0.203524, 0.319078, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_q6r6c"]
+gradient = SubResource("Gradient_0hol4")
+width = 1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rj586"]
+shader = ExtResource("5_d21ai")
+shader_parameter/UpdateCounter = 0
+shader_parameter/color_scale = 1.0
+shader_parameter/mouse_position = Vector2(0, 0)
+shader_parameter/brush_size = 10.0
+shader_parameter/ambient = Vector4(0, 0, 0, 1)
+shader_parameter/brush_shape = 0
+shader_parameter/sun_angle = 0.0
+shader_parameter/outline = true
+shader_parameter/show_particle = false
+shader_parameter/show_normal = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_kdubu"]
+font = ExtResource("5_q6r6c")
+font_size = 5
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d21ai"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rj586"]
+bg_color = Color(0.45269, 0.185762, 0.161554, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d21ai"]
+bg_color = Color(0.234147, 0.239368, 0.579287, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rj586"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0ka3"]
+bg_color = Color(0.813258, 0.813258, 0.813257, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ir8iy"]
+bg_color = Color(0.158745, 0.269065, 0.256129, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4d7sh"]
+bg_color = Color(0.209182, 0.33949, 0.324224, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqns4"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flf07"]
+bg_color = Color(0.226497, 0.394138, 0.300624, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqns4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h7mo"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nr8wp"]
+bg_color = Color(0.223764, 0.349221, 0.301406, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2bti"]
+bg_color = Color(0.311251, 0.556495, 0.49389, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ta5nu"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0ka3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4d7sh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ir8iy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0h7mo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nr8wp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d2bti"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ta5nu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_flf07"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k73cj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjqkl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fs4d3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vxoj"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Main" type="Node" parent="." node_paths=PackedStringArray("sprite", "FPSlabel", "MaterialLabel")]
+script = ExtResource("1_0e48y")
+texture_2drd = ExtResource("2_0hol4")
+texture2d_size = Vector2i(1536, 1024)
+sprite = NodePath("../FinalOutputImage")
+FPSlabel = NodePath("../FPSLabel")
+MaterialLabel = NodePath("../MaterialDataLabel")
+
+[node name="BackGround" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(18, 18)
+scale = Vector2(1556, 1044)
+texture = SubResource("GradientTexture1D_q6r6c")
+centered = false
+
+[node name="FinalOutputImage" type="Sprite2D" parent="."]
+texture_filter = 4
+texture_repeat = 1
+material = SubResource("ShaderMaterial_rj586")
+position = Vector2(28, 28)
+texture = ExtResource("2_0hol4")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(1892, 81)
+rotation = -1.43641
+texture = ExtResource("2_epypp")
+
+[node name="FPSLabel" type="Label" parent="."]
+offset_left = 1588.0
+offset_top = 20.0
+offset_right = 1620.0
+offset_bottom = 43.0
+scale = Vector2(5, 5)
+text = "FPS:"
+label_settings = SubResource("LabelSettings_kdubu")
+
+[node name="MaterialDataLabel" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_top = 1040.0
+offset_right = 1917.0
+offset_bottom = 1079.0
+bbcode_enabled = true
+vertical_alignment = 2
+
+[node name="UI" type="Control" parent="." node_paths=PackedStringArray("lanuage_switch_botton", "color_picker", "material_selector", "menuList", "menu", "material_parameters_slider", "material_parameters_label", "total_time_coast_label", "time_coast_label", "emit_rotation_rate_label", "emit_rotation_rate_spin", "emit_z_order_offset_label", "emit_z_order_offset_spin", "particle_jump_length_label", "particle_jump_length_spin", "particle_jump_times_label", "particle_jump_times_spin", "is_particle_transit_buttom", "is_fluid_simulation_buttom", "kalman_process_noise_spin", "kalman_measurement_noise_spin", "canvas_brush_shape", "special_buttom", "unique_material_Buttom", "normal_mode_button", "custom_normal_spin", "invert_normal_buttom", "write_radiant_dir_buttom", "ambient_strength_slider", "ambient_color_buttom", "show_outline_buttom", "show_particle_buttom", "show_normal_buttom", "chromatic_dispersion_buttom", "light_penetration_spin", "brghtnegative_feedback_buttom", "emit_material_decay_spin", "brightness_diffuse_times_spin", "particle_simulation_times_spin", "brightness_blend_ratio_spin")]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1581.0
+offset_top = 290.0
+offset_right = 1621.0
+offset_bottom = 330.0
+script = ExtResource("4_kdubu")
+lanuage_switch_botton = NodePath("Button")
+color_picker = NodePath("MaterialSetting/ScrollContainer/VBoxContainer/ColorPicker")
+material_selector = NodePath("MaterialSetting/ScrollContainer/VBoxContainer/ItemList")
+menuList = NodePath("ItemList2")
+menu = [NodePath("MaterialSetting"), NodePath("BrushSetting"), NodePath("LightSystemScene")]
+material_parameters_slider = [NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/IOR/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/ScatterRate/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Transparency/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/isMetal?/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Emit Strength/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LightEmitRange/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LeftScatter/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/RightScatter/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravX/HSlider"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravY/HSlider")]
+material_parameters_label = [NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/IOR"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/ScatterRate"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Transparency"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/isMetal?"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Emit Strength"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LightEmitRange"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LeftScatter"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/RightScatter"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravX"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravY"), NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/UniqueMaterial")]
+total_time_coast_label = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/Material_Presets/SimplifiedFlagTable/RichTextLabel")
+time_coast_label = [NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness"), NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness3"), NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness2"), NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness4"), NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness5"), NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer/Roughness6")]
+emit_rotation_rate_label = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness")
+emit_rotation_rate_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness/SpinBox")
+emit_z_order_offset_label = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness3")
+emit_z_order_offset_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness3/SpinBox")
+particle_jump_length_label = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness7")
+particle_jump_length_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness7/SpinBox")
+particle_jump_times_label = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness6")
+particle_jump_times_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness6/SpinBox")
+is_particle_transit_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness10/OptionButton")
+is_fluid_simulation_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness9/OptionButton")
+kalman_process_noise_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness2/SpinBox")
+kalman_measurement_noise_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness4/SpinBox")
+canvas_brush_shape = NodePath("BrushSetting/ScrollContainer/VBoxContainer/ItemList")
+special_buttom = NodePath("../dont_click_me")
+unique_material_Buttom = NodePath("MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/UniqueMaterial/OptionButton")
+normal_mode_button = NodePath("BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness3/OptionButton")
+custom_normal_spin = NodePath("BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness6/SpinBox")
+invert_normal_buttom = NodePath("BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness4/OptionButton")
+write_radiant_dir_buttom = NodePath("BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness5/OptionButton")
+ambient_strength_slider = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness2/HSlider")
+ambient_color_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness4/ColorPickerButton")
+show_outline_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness10/OptionButton")
+show_particle_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness11/OptionButton")
+show_normal_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness12/OptionButton")
+chromatic_dispersion_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness13/OptionButton")
+light_penetration_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness5/SpinBox")
+brghtnegative_feedback_buttom = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness14/OptionButton")
+emit_material_decay_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness16/SpinBox")
+brightness_diffuse_times_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness17/SpinBox")
+particle_simulation_times_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness18/SpinBox")
+brightness_blend_ratio_spin = NodePath("LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness19/SpinBox")
+
+[node name="Button" type="Button" parent="UI"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 0
+offset_left = 5.0
+offset_top = -187.0
+offset_right = 265.0
+offset_bottom = -163.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_q6r6c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d21ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rj586")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d21ai")
+button_mask = 3
+text = "Lanuage Switch To ENGLISH"
+alignment = 0
+
+[node name="ItemList2" type="ItemList" parent="UI"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -146.0
+offset_right = 323.0
+offset_bottom = -60.0
+theme_override_colors/guide_color = Color(0.232203, 0.280193, 0.79499, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_q6r6c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rj586")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0ka3")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_ir8iy")
+theme_override_styles/hovered_selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/hovered_selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor_unfocused = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor = SubResource("StyleBoxFlat_4d7sh")
+allow_rmb_select = true
+auto_width = true
+text_overrun_behavior = 4
+item_count = 3
+same_column_width = true
+fixed_column_width = 305
+item_0/text = "Material Setting"
+item_1/text = "Brush Setting"
+item_2/text = "Lighting System & Envirment"
+
+[node name="MaterialSetting" type="Panel" parent="UI"]
+visible = false
+clip_children = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -18.0
+offset_right = 332.0
+offset_bottom = 849.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqns4")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/MaterialSetting"]
+layout_mode = 0
+offset_right = 333.0
+offset_bottom = 788.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MaterialSetting/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Material_Presets" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Material_Presets"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Material_Presets/SimplifiedFlagTable"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 8.0
+offset_top = 4.0
+offset_right = 344.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Material Presets"
+
+[node name="ItemList" type="ItemList" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_q6r6c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rj586")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_ir8iy")
+theme_override_styles/hovered_selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/hovered_selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor_unfocused = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor = SubResource("StyleBoxFlat_4d7sh")
+allow_reselect = true
+allow_rmb_select = true
+auto_width = true
+auto_height = true
+item_count = 8
+max_columns = 2
+same_column_width = true
+fixed_column_width = 160
+item_0/text = "Luminous body"
+item_1/text = "Ceramic"
+item_2/text = "Glass"
+item_3/text = "Frosted glass"
+item_4/text = "Black body"
+item_5/text = "Mirror"
+item_6/text = "Sandstone"
+item_7/text = "Glowstone"
+
+[node name="Custom_Material_Setting" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting/SimplifiedFlagTable"]
+auto_translate_mode = 1
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 342.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Custom Material Parameters"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Roughness" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Roughness (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="IOR" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "IOR (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/IOR"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="ScatterRate" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "ScatterRate (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/ScatterRate"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="Transparency" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Transparency (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Transparency"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="isMetal?" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "isMetal? (No)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/isMetal?"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="Emit Strength" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit Strength (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/Emit Strength"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="LightEmitRange" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit Range (324pix)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LightEmitRange"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="LeftScatter" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit ScatterL (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/LeftScatter"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="RightScatter" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit ScatterR (0.0)"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/RightScatter"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="UniqueMaterial" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Unique Material"
+
+[node name="OptionButton" type="OptionButton" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/UniqueMaterial"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "None"
+popup/item_0/id = 0
+popup/item_1/text = "Gravity Field"
+popup/item_1/id = 1
+popup/item_2/text = "Portal"
+popup/item_2/id = 2
+
+[node name="GravX" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "GravityX"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravX"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="GravY" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "GravityY"
+
+[node name="HSlider" type="HSlider" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/VBoxContainer/GravY"]
+layout_mode = 0
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 1.0
+
+[node name="CustomMaterialSetting" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="Color_picker" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Color_picker"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/Color_picker/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 341.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Color Picker"
+
+[node name="ColorPicker" type="ColorPicker" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+edit_alpha = false
+color_mode = 2
+picker_shape = 2
+can_add_swatches = false
+sampler_visible = false
+color_modes_visible = false
+hex_visible = false
+presets_visible = false
+
+[node name="FlagTable" type="VBoxContainer" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = -2
+
+[node name="Bit0" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit0"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit0/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit0/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit0/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit0/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit1" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit1"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit1/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit1/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit1/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit1/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit2" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit2"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit2/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit2/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit2/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit2/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit3" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit3"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit3/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit3/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit3/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit3/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit4" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit4"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit4/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit4/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit4/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit4/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit5" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit5"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit5/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit5/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit5/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit5/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit6" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit6"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit6/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit6/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit6/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit6/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bit7" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit7"]
+layout_mode = 0
+offset_right = 318.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h7mo")
+
+[node name="Panel3" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit7/Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 2.0
+offset_right = 316.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nr8wp")
+
+[node name="Panel" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit7/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 23.0
+offset_bottom = 23.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d2bti")
+
+[node name="Panel2" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit7/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ta5nu")
+
+[node name="Label" type="Label" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable/Bit7/Panel"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 24.0
+offset_bottom = 25.0
+theme_override_font_sizes/font_size = 16
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlagTable2" type="Control" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable2"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable2/SimplifiedFlagTable"]
+visible = false
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 336.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Material_Flag[7:0] = 8'b[color=#7F7F7FFF]00000001[/color]"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/MaterialSetting/ScrollContainer/VBoxContainer/FlagTable2"]
+visible = false
+layout_mode = 0
+offset_top = 34.0
+offset_right = 329.0
+offset_bottom = 289.0
+theme_override_font_sizes/normal_font_size = 16
+text = "0:this material emit photon
+----------------------------------------
+1:photon die immediately when reach this material
+----------------------------------------
+2:consider transparency of this material when reach this material
+----------------------------------------"
+
+[node name="BrushSetting" type="Panel" parent="UI"]
+visible = false
+clip_children = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -18.0
+offset_right = 332.0
+offset_bottom = 849.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqns4")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/BrushSetting"]
+layout_mode = 0
+offset_right = 333.0
+offset_bottom = 788.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/BrushSetting/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Material_Presets" type="Control" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Material_Presets"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Material_Presets/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 9.0
+offset_top = 4.0
+offset_right = 345.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Brush Shape"
+
+[node name="ItemList" type="ItemList" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_q6r6c")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rj586")
+theme_override_styles/hovered = SubResource("StyleBoxFlat_ir8iy")
+theme_override_styles/hovered_selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/hovered_selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/selected_focus = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor_unfocused = SubResource("StyleBoxFlat_4d7sh")
+theme_override_styles/cursor = SubResource("StyleBoxFlat_4d7sh")
+allow_reselect = true
+allow_rmb_select = true
+auto_width = true
+auto_height = true
+item_count = 2
+max_columns = 2
+same_column_width = true
+fixed_column_width = 160
+item_0/text = "〇 Circle"
+item_1/text = "□ Square"
+
+[node name="Custom_Material_Setting" type="Control" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 343.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Brush Parameters"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Roughness3" type="Label" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Normal mode"
+
+[node name="OptionButton" type="OptionButton" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness3"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x0ka3")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Auto"
+popup/item_0/id = 2
+popup/item_1/text = "Custom"
+popup/item_1/id = 1
+
+[node name="Roughness6" type="Label" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Custom Normal"
+
+[node name="SpinBox" type="SpinBox" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness6"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 999.0
+step = 0.01
+alignment = 2
+suffix = "°"
+
+[node name="Roughness4" type="Label" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Inverse normal"
+
+[node name="OptionButton" type="OptionButton" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness4"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x0ka3")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "No"
+popup/item_0/id = 2
+popup/item_1/text = "Yes"
+popup/item_1/id = 1
+
+[node name="Roughness5" type="Label" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Write radiant dir"
+
+[node name="OptionButton" type="OptionButton" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer/Roughness5"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x0ka3")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "No"
+popup/item_0/id = 2
+popup/item_1/text = "Yes"
+popup/item_1/id = 1
+
+[node name="Custom_Material_Setting2" type="Control" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/Custom_Material_Setting2/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 343.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Controls Tips"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/BrushSetting/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT1"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT2"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT3"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT4"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(70, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT5"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT6"
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT7"
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="UI/BrushSetting/ScrollContainer/VBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(50, 22)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "CT8"
+
+[node name="LightSystemScene" type="Panel" parent="UI"]
+visible = false
+clip_children = 1
+layout_mode = 0
+offset_left = 3.0
+offset_top = -18.0
+offset_right = 332.0
+offset_bottom = 849.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqns4")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="UI/LightSystemScene"]
+layout_mode = 0
+offset_right = 333.0
+offset_bottom = 788.0
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LightSystemScene/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Material_Presets" type="Control" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Material_Presets"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Material_Presets/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 341.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Time Cost"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Roughness" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Particle Emit"
+
+[node name="Roughness3" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Particle Transit"
+
+[node name="Roughness2" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Energy Diffuse(Blur)"
+
+[node name="Roughness4" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Film Exposure"
+
+[node name="Roughness5" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Fluid Simulation"
+
+[node name="Roughness6" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Texture Prob"
+
+[node name="Custom_Material_Setting" type="Control" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Custom_Material_Setting"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Custom_Material_Setting/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 343.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "LightingSystem Parameters"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Roughness18" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Particle probagation times"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness18"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 10.0
+value = 1.0
+rounded = true
+alignment = 2
+
+[node name="Roughness8" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Iteration Mode"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness8"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x0ka3")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Fixed"
+popup/item_0/id = 2
+popup/item_1/text = "Auto"
+popup/item_1/id = 1
+
+[node name="Roughness11" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = " Time cost goal"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness11"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 999.0
+step = 0.01
+value = 4.5
+alignment = 2
+suffix = "ms"
+
+[node name="Roughness12" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = " Fixed iteration times"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness12"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+value = 1.0
+alignment = 2
+
+[node name="Roughness" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit rotation rate"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 1.0
+step = 0.001
+alignment = 2
+
+[node name="Roughness3" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit Z-order offset"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness3"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 1.0
+step = 0.001
+alignment = 2
+
+[node name="Roughness7" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "particle jump length"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness7"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 10.0
+step = 0.1
+value = 3.0
+alignment = 2
+suffix = "px"
+
+[node name="Roughness6" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "particle Max jump times"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness6"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 999.0
+value = 108.0
+alignment = 2
+
+[node name="Roughness10" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "particle transit"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness10"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 1
+item_count = 2
+popup/item_0/text = "Disable"
+popup/item_0/id = 1
+popup/item_1/text = "Enable"
+popup/item_1/id = 1
+
+[node name="Roughness13" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Chromatic dispersion"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness13"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 1
+item_count = 2
+popup/item_0/text = "Disable"
+popup/item_0/id = 1
+popup/item_1/text = "Enable"
+popup/item_1/id = 1
+
+[node name="Roughness14" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Brightness feedback"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness14"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 1
+item_count = 2
+popup/item_0/text = "Disable"
+popup/item_0/id = 1
+popup/item_1/text = "Enable"
+popup/item_1/id = 1
+
+[node name="Roughness16" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Emit material decay"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness16"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 1.0
+step = 0.001
+value = 0.033
+alignment = 2
+
+[node name="Roughness15" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "kalman measurement noise"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness15"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+step = 0.001
+alignment = 2
+
+[node name="Roughness5" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Light penetration"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness5"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 1.0
+step = 0.001
+value = 0.333
+alignment = 2
+
+[node name="Roughness19" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Brightness blend ratio"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness19"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 1.0
+step = 0.001
+value = 0.05
+alignment = 2
+
+[node name="Roughness17" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Brightness diffuse times"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness17"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 10.0
+value = 2.0
+rounded = true
+alignment = 2
+
+[node name="Roughness2" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "kalman process noise"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness2"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+max_value = 10.0
+step = 0.001
+alignment = 2
+
+[node name="Roughness4" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "kalman measurement noise"
+
+[node name="SpinBox" type="SpinBox" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness4"]
+layout_mode = 0
+offset_left = 230.0
+offset_right = 327.0
+offset_bottom = 27.0
+step = 0.001
+alignment = 2
+
+[node name="Roughness9" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Fluid simulation"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer3/Roughness9"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Disable"
+popup/item_0/id = 0
+popup/item_1/text = "Enable"
+popup/item_1/id = 1
+
+[node name="Custom_Material_Setting2" type="Control" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SimplifiedFlagTable" type="Panel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Custom_Material_Setting2"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_right = 336.0
+offset_bottom = 30.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_flf07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/Custom_Material_Setting2/SimplifiedFlagTable"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 341.0
+offset_bottom = 34.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Scene Parameters"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Roughness2" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Ambient strength"
+
+[node name="HSlider" type="HSlider" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness2"]
+layout_mode = 2
+offset_left = 179.0
+offset_top = 3.0
+offset_right = 329.0
+offset_bottom = 19.0
+max_value = 1.0
+step = 0.0
+value = 0.06
+
+[node name="Roughness4" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Ambient color"
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness4"]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 327.0
+offset_bottom = 22.0
+color = Color(1, 1, 1, 1)
+
+[node name="Roughness10" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Material outline"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness10"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 1
+item_count = 2
+popup/item_0/text = "No"
+popup/item_0/id = 1
+popup/item_1/text = "Yes"
+popup/item_1/id = 1
+
+[node name="Roughness11" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Visualize transit"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness11"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "No"
+popup/item_0/id = 1
+popup/item_1/text = "Yes"
+popup/item_1/id = 1
+
+[node name="Roughness12" type="Label" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Visualize normal"
+
+[node name="OptionButton" type="OptionButton" parent="UI/LightSystemScene/ScrollContainer/VBoxContainer/VBoxContainer2/Roughness12"]
+layout_mode = 0
+offset_left = 179.0
+offset_right = 324.0
+offset_bottom = 27.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hqns4")
+alignment = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "No"
+popup/item_0/id = 1
+popup/item_1/text = "Yes"
+popup/item_1/id = 1
+
+[node name="dont_click_me" type="Button" parent="."]
+offset_left = 1853.0
+offset_top = 40.0
+offset_right = 1939.0
+offset_bottom = 121.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4d7sh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ir8iy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0h7mo")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_nr8wp")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_d2bti")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ta5nu")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_flf07")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_k73cj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_rjqkl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fs4d3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vxoj")

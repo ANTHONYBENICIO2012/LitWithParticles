@@ -1,0 +1,79 @@
+id,en,zh
+Lanuage Switch To ENGLISH,语言切换至中文,Lanuage Switch To ENGLISH
+FPS,FPS,帧/秒
+Luminous body,Luminous body,发光体
+Ceramic,Ceramic,陶瓷
+Glass,Glass,玻璃
+Black body,Black body,黑体
+Mirror,Mirror,镜子
+Roughness,Roughness,粗糙度
+IOR,IOR,折射率
+Scatter Rate,Scatter Rate,散射率
+opacity,opacity,不透明度
+Metallic,Metallic,金属度
+Emit Strength,Emit Strength,发光强度
+Emit Range,Emit Range,发光距离
+Emit Angle L,Emit Angle L,发光角度左
+Emit Angle R,Emit Angle R,发光角度右
+GravityX,GravityX,引力强度X
+GravityY,GravityY,引力强度Y
+PortalX,PortalX,传送距离X
+PortalY,PortalY,传送距离Z
+Material Presets,Material Presets,材质预设
+Material Setting,Material Setting,材质设置
+Brush Setting,Brush Setting,笔刷设置
+Lighting System & Envirment,Lighting System & Scene,光照系统与场景设置
+Custom Material Parameters,Custom Material Parameters,自定义材质参数
+Color Picker,Color Picker,取色器
+Brush Shape,Brush Shape,笔刷形状
+Brush Parameters,Brush Parameters,笔刷参数
+〇 Circle,〇 Circle,〇 圆形
+□ Square,□ Square,□ 矩形
+Time Cost,Time Cost,总耗时
+LightingSystem Parameters,LightingSystem Parameters,光照系统参数
+Scene Parameters,Scene Parameters,场景参数
+Film Exposure,Film Exposure,冲洗胶片
+Particle Emit,Particle Emit,发射粒子
+Particle Transit,Particle Transit,中继粒子
+Energy Diffuse,Brightness Diffuse,亮度扩散
+Fluid Sim,Fluid Sim,流体模拟
+Normal mode,Normal mode,法线模式
+Custom Normal,Custom Normal,自定义法线
+Inverse normal,Inverse normal,反转法线
+Write radiant dir,Write radiant dir,根据法线写入辐射状力场方向
+Emit rotation rate,Emit rotation rate,发射旋转速率
+Emit Z-order offset,Emit Z-order offset,发射Z-order偏移
+particle jump length,particle jump length,粒子步进步长
+particle Max jump times,particle Max jump times,粒子步进次数
+particle transit,particle transit,粒子中继
+Fluid simulation,Fluid simulation,流体模拟
+Yes,Yes,是
+No,No,否
+Enable,Enable,启用
+Disable,Disable,禁用
+None,None,无
+Auto,Auto,自动
+Custom,Custom,自定义的
+Ambient strength,Ambient strength,环境光强度
+Ambient color,Ambient color,环节光颜色
+Chromatic dispersion,Chromatic dispersion,光色散
+Brightness feedback,Brightness feedback,亮度反馈
+Emit material decay,Emit material decay,发光材质衰减
+Light penetration,Light penetration,光穿透
+Material outline,Material outline,材质描边
+Visualize transit,Visualize transit,显示中继粒子
+Visualize normal,Visualize normal,显示法线
+Brightness diffuse times,Brightness diffuse times,亮度扩散次数
+Brightness blend ratio,Brightness blend ratio,亮度混合比例
+Controls Tips,Controls Tips,操作指南
+CT1,[color=#FFCFCF]Left Mouse[/color]    : draw material,[color=#FFCFCF]鼠标左键[/color]    : 绘制材质
+CT2,[color=#FFCFCF]Right Mouse[/color]   : erase material,[color=#FFCFCF]鼠标右键[/color]    : 清除材质
+CT3,[color=#FFCFCF]Scroll Wheel[/color]  : adjust brush size,[color=#FFCFCF]鼠标滚轮[/color]    : 调整笔刷大小
+CT4,[color=#BFBFFF]Ctrl[/color] + [color=#FFCFCF]Mouse[/color]  : line drawing mode,[color=#BFBFFF]Ctrl[/color] + [color=#FFCFCF]鼠标[/color] : 直线绘制模式
+CT5,[color=#BFBFFF]ALT[/color] + [color=#FFCFCF]Mouse[/color]   : draw fluid(if enable),[color=#BFBFFF]ALT[/color]  + [color=#FFCFCF]鼠标[/color] : 绘制流体(如果启用流体)
+CT6,[color=#BFBFFF]X[/color]             : move in X asix,[color=#BFBFFF]X[/color]           : 仅在X轴上移动
+CT7,[color=#BFBFFF]Y[/color]             : move in Y asix,[color=#BFBFFF]Y[/color]           : 仅在Y轴上移动
+CT8,[color=#BFBFFF]Q[/color]             : switch brush shape,[color=#BFBFFF]Q[/color]           : 切换笔刷形状
+Frosted glass,Frosted glass,磨制玻璃
+Sandstone,Sandstone,砂岩
+Glowstone,Glowstone,萤石
