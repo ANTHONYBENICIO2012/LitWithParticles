@@ -1,12 +1,12 @@
 [中文](Readme_CN.md)
 
-# Lit With Particles😢
+# Lit With Particles
 
 **Lit With Particles** is a unique experimental 2D lighting system built with **Godot 4.4**.
 
 Unlike traditional ray-casting or SDF-based 2D lighting, this project evaluates brightness by simulating **photons (particles)** emitted directly from light sources. It leverages **Compute Shaders** heavily to achieve high-performance, real-time simulation of light propagation, reflection, refraction, and even fluid dynamics.
 
-## ✨ Key Features
+## Key Features
 
 - **Particle-Based Lighting**: Simulates light behavior using massive particle systems on the GPU.
 - **Advanced Material System**:
@@ -16,7 +16,9 @@ Unlike traditional ray-casting or SDF-based 2D lighting, this project evaluates 
 - **Fluid Simulation**: Integrated real-time fluid dynamics (Navier-Stokes based) interacting with the lighting.
 - **High Performance**: Fully powered by Godot's `RenderingDevice` API and Compute Shaders.
 
-## 🎮 Controls
+## Controls
+
+Recommended to run in 1920x1080 resolution (as I only adapted it for this resolution).
 
 | Input | Action |
 | :--- | :--- |
@@ -28,7 +30,7 @@ Unlike traditional ray-casting or SDF-based 2D lighting, this project evaluates 
 | **Hold Y** | Lock Mouse Movement to Y-Axis |
 | **Press Q** | Toggle Brush Shape (Circle / Square) |
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Engine**: Godot 4.4
 - **Language**: GDScript & GLSL (Compute Shaders)
